@@ -20,6 +20,26 @@ print(resp.status_code)
 print(resp.json())
 ```
 
+## How to use no-requests in place of requests
+
+If you want to replace the `requests` module in your project with `no-requests`, you can do so by adding the following line to your `requirements.txt`:
+
+```
+requests @ git+https://github.com/gatopeich/no-requests.git
+```
+
+This will install `no-requests` as if it were `requests`, letting you import it as usual:
+
+```python
+import requests
+
+resp = requests.get('https://example.com')
+print(resp.status_code)
+```
+
+**Note:**  
+This works because the package provides a `requests`-like API and will be installed as the `requests` package in your environment, overriding the original. Be sure to remove any other lines referring to `requests` in your `requirements.txt` to avoid conflicts.
+
 ## License
 
 MIT
