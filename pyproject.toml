@@ -9,13 +9,15 @@ description = "A lightweight, dependency-free, requests-like HTTP client with sa
 authors = [
     { name="gatopeich", email="gatopeich@users.noreply.github.com" }
 ]
-license = { file = "LICENSE" }
+license = "MIT"
 readme = "README.md"
 requires-python = ">=3.6"
 keywords = ["http", "requests", "standard library", "no dependencies", "lightweight"]
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
 urls = { "Homepage" = "https://github.com/gatopeich/no-requests" }
+
+[tool.setuptools]
+py-modules = ["norequests"]
